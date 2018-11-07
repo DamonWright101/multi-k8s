@@ -19,7 +19,7 @@ before_install:
 - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin  
 - docker build -t dwright101/react-test -f ./client/Dockerfile.dev ./client
 
-scripts:  
+script:  
 - docker run dwright101/react-test npm test -- --coverage
 
 deploy:
